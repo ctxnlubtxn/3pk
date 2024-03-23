@@ -30,14 +30,19 @@ import { Label } from "@/components/ui/label"
 export default function NavMenu() {
     const { setTheme } = useTheme()
     const menus = {
-        "/": "Home",
-        "/scam-apk": "SpamScam APK",
+        " ": " ",
+        " ": " ",
     };
     const [open, setOpen] = useState(false);
 
     return (
 
+        <div className="flex justify-between items-center bg-white-800 p-4">
+            <div className="flex items-center">
 
+                <h1 className="text-2xl text-white"> </h1>
+
+            </div>
 
             {/* responsive menu */}
             <div className="hidden md:flex items-center">
@@ -51,7 +56,7 @@ export default function NavMenu() {
                     </a>
                 ))}
                 
-                <a className="mx-2" href="https://github.com/bagusindrayana/extract-apk-web">
+                <a className="mx-2" href="#">
                     <FaGithub className="text-white text-2xl" />
                 </a>
                 <DropdownMenu>
@@ -92,8 +97,8 @@ export default function NavMenu() {
                             ))}
                             <MenubarSeparator />
                             <MenubarItem>
-                                <a className="mx-1 flex" href="https://github.com/bagusindrayana/extract-apk-web">
-                                    <FaGithub className="text-2xl mx-2" /> <span>Repository</span>
+                                <a className="mx-1 flex" href="#">
+                                    <FaGithub className="text-2xl mx-2" /> <span>#</span>
                                 </a>
                             </MenubarItem>
                             <MenubarItem>
