@@ -261,18 +261,6 @@ export default function Home() {
         </div>
 
         <div className="grid gap-2">
-          <h3 className="text-lg font-bold">Example APK</h3>
-          <div className="grid gap-2 md:grid-cols-3">
-            {
-              exampleApks.map((apk, index) => {
-                return (
-                  <Button key={index} size="sm" onClick={() => {
-                    loadRemoteFile(`/examples/${apk}`);
-                  }}>{apk}</Button>
-                )
-              })
-            }
-          </div>
         </div>
 
         <div className="grid gap-4">
