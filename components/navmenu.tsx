@@ -37,12 +37,7 @@ export default function NavMenu() {
 
     return (
 
-        <div className="flex justify-between items-center bg-gray-800 p-4">
-            <div className="flex items-center">
 
-                <h1 className="text-2xl text-white">Extract APK Data</h1>
-
-            </div>
 
             {/* responsive menu */}
             <div className="hidden md:flex items-center">
