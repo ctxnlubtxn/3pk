@@ -4,35 +4,18 @@ import { TiThMenu } from 'react-icons/ti';
 import { useState } from 'react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
-import { Label } from '@/components/ui/label';
 import { useTheme } from 'next-themes';
 import * as React from 'react';
 import { Button } from '@/components/ui/button';
 
 export default function NavMenu() {
     const { setTheme } = useTheme();
-    const menus = {
-        '/': 'Home',
-        '/scam-apk': 'SpamScam APK',
-    };
     const [open, setOpen] = useState(false);
 
     return (
         <div className="flex justify-between items-center bg-gray-800 p-4">
-            <div className="flex items-center">
-                <h1 className="text-2xl text-white">Extract APK Data</h1>
-            </div>
-
             {/* responsive menu */}
             <div className="hidden md:flex items-center">
-                {Object.entries(menus).map(([href, label]) => (
-                    <a key={href} href={href} className="mx-2 text-white underline hover:no-underline">
-                        {label}
-                    </a>
-                ))}
-                <a className="mx-2" href="https://github.com/bagusindrayana/extract-apk-web">
-                    <FaGithub className="text-white text-2xl" />
-                </a>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" size="icon" id="changeThemeMobile">
@@ -57,11 +40,8 @@ export default function NavMenu() {
             {/* responsive menu */}
             {open && (
                 <div className="md:hidden">
-                    {Object.entries(menus).map(([href, label]) => (
-                        <a key={href} href={href} className="block text-white">
-                            {label}
-                        </a>
-                    ))}
+                    <a href="/" className="block text-white">Home</a>
+                    <a href="/scam-apk" className="block text-white">SpamScam APK</a>
                 </div>
             )}
         </div>
