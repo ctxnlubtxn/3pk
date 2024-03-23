@@ -17,9 +17,6 @@ export default function NavMenu() {
             </div>
 
             {/* hamburger menu for mobile */}
-            <div className="md:hidden">
-                <TiThMenu className="text-2xl"></TiThMenu>
-            </div>
 
             {/* responsive menu */}
             {open && (
