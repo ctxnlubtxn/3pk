@@ -299,27 +299,23 @@ export default function ScamApkPage() {
                             <h4 className="font-bold text-2xl">Bot Token</h4>
                             {
                                 listBotToken.length > 0 ? (
-                                    <Accordion type="single" collapsible>
-                                        {
-                                            listBotToken.map((data, index) => {
-                                                return (
-                                                    <AccordionItem value={"item-" + index.toString()} key={index}>
-                                                        <AccordionTrigger className="overflow-x-auto">
-                                                            <p className="underline text-blue-500">{data.botToken}</p>
-                                                        </AccordionTrigger>
-                                                        <AccordionContent>
-                                                            <div className="flex flex-col">
-                                                                <GetInformationButton BotToken={data.botToken} ChatId={data.chatId}></GetInformationButton>
-                                                                <SpamBotButton BotToken={data.botToken} ChatId={data.chatId}></SpamBotButton>
-                                                                <LogoutBotButton BotToken={data.botToken}></LogoutBotButton>
-                                                            </div>
-                                                        </AccordionContent>
-                                                    </AccordionItem>
-                                                )
-                                            })
-                                        }
-
-                                    </Accordion>
+                <Accordion type="single" collapsible>
+                    {listBotToken.map((data, index) => (
+                        <AccordionItem value={"item-" + index.toString()} key={index}>
+                            <AccordionTrigger className="overflow-x-auto">
+                                <p className="underline text-blue-500">{data.botToken}</p>
+                                <p className="text-red-500"> | Scam Alert!</p> {/* Added text with red color */}
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <div className="flex flex-col">
+                                    <GetInformationButton BotToken={data.botToken} ChatId={data.chatId}></GetInformationButton>
+                                    <SpamBotButton BotToken={data.botToken} ChatId={data.chatId}></SpamBotButton>
+                                    <LogoutBotButton BotToken={data.botToken}></LogoutBotButton>
+                                </div>
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
                                 ) : (
                                     <div className="grid gap-2 p-4">
                                         <h3 className="text-lg font-bold">Result</h3>
