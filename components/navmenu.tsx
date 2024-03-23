@@ -14,16 +14,6 @@ export default function NavMenu() {
         <div>
             {/* responsive menu */}
             <div className="hidden md:flex items-center">
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <span className="sr-only">Toggle theme</span>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        {/* <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem> */}
-                    </DropdownMenuContent>
-                </DropdownMenu>
             </div>
 
             {/* hamburger menu for mobile */}
