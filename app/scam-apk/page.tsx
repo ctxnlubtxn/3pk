@@ -200,13 +200,13 @@ export default function ScamApkPage() {
                 <div className="grid gap-2">
                     
                     <p className="max-w-[800px] text-gray-500 md:text-base/relaxed dark:text-gray-400">
-                        Upload an APK file to extract the data. The entire process is conducted client-side, ensuring that no data is sent to the server.
+                        The entire process is conducted client-side, ensuring that no data is sent to the server.
                     </p>
                     <p className="text-red-500">
-                        Our system will extract and search for the Telegram bot token within the APK. Subsequently, it will request information from the Telegram bot API to retrieve details about the bot and users. It can also spam or force the bot to log out or be turned off. This functionality only works if the bot token is stored as plain text in classes.dex
+                        Our system will extract and search for the Telegram bot token within the APK. This functionality only works if the bot token is stored as plain text.
                     </p>
                     <p>
-                        Please note the file size limitations: the maximum file size allowed is 50MB, but we recommend a file size of less than 20MB to prevent your browser from freezing or crashing.
+                        Please note: the maximum file size allowed is 50MB, but we recommend a file size of less than 20MB to prevent your browser from freezing or crashing.
                     </p>
                 </div>
 
