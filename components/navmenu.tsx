@@ -11,17 +11,25 @@ import { Button } from '@/components/ui/button';
 
 export default function NavMenu() {
     const { setTheme } = useTheme();
-    const menus = {};
+    const menus = {
+        '/': 'Home',
+        '/scam-apk': 'SpamScam APK',
+    };
     const [open, setOpen] = useState(false);
 
     return (
         <div className="flex justify-between items-center bg-gray-800 p-4">
             <div className="flex items-center">
-                <h1 className="text-2xl text-white">Your Website Title</h1>
+                <h1 className="text-2xl text-white">Extract APK Data</h1>
             </div>
 
             {/* responsive menu */}
             <div className="hidden md:flex items-center">
+                {Object.entries(menus).map(([href, label]) => (
+                    <a key={href} href={href} className="mx-2 text-white underline hover:no-underline">
+                        {label}
+                    </a>
+                ))}
                 <a className="mx-2" href="https://github.com/bagusindrayana/extract-apk-web">
                     <FaGithub className="text-white text-2xl" />
                 </a>
@@ -43,42 +51,7 @@ export default function NavMenu() {
 
             {/* hamburger menu for mobile */}
             <div className="md:hidden">
-                <Menubar>
-                    <MenubarMenu>
-                        <MenubarTrigger>
-                            <TiThMenu className="text-2xl"></TiThMenu>
-                        </MenubarTrigger>
-                        <MenubarContent>
-                            <MenubarSeparator />
-                            <MenubarItem>
-                                <a className="mx-1 flex" href="https://github.com/bagusindrayana/extract-apk-web">
-                                    <FaGithub className="text-2xl mx-2" /> <span>Repository</span>
-                                </a>
-                            </MenubarItem>
-                            <MenubarItem>
-                                <div className="flex mx-1 content-center items-center align-middle">
-                                    <DropdownMenu>
-                                        <DropdownMenuTrigger asChild>
-                                            <Button variant="outline" size="icon" id="changeThemeMobile">
-                                                <BsSunFill className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                                                <BsMoonStarsFill className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                                                <span className="sr-only">Toggle theme</span>
-                                            </Button>
-                                        </DropdownMenuTrigger>
-                                        <DropdownMenuContent align="end">
-                                            <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
-                                            <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-                                            <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
-                                    <Label className="ml-1" htmlFor="changeThemeMobile">
-                                        Theme
-                                    </Label>
-                                </div>
-                            </MenubarItem>
-                        </MenubarContent>
-                    </MenubarMenu>
-                </Menubar>
+                <TiThMenu className="text-2xl"></TiThMenu>
             </div>
 
             {/* responsive menu */}
