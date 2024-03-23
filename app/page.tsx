@@ -252,10 +252,10 @@ export default function Home() {
       <div className="container flex flex-col gap-4 px-4 md:px-6">
         <div className="grid gap-2">
           <p className="max-w-[800px] text-gray-500 md:text-base/relaxed dark:text-gray-400">
-            Upload APK file to extract the data. all process is done in client side, no data will be sent to server.
+            Upload an APK file to extract the data. The entire process is conducted client-side, ensuring that no data is sent to the server
           </p>
           <p>
-            please be aware of the file size,max file size is 50MB, but recomended file size is less than 20MB or your browser will freeze or crash.
+            Please be aware of the file size; the maximum file size allowed is 50MB, but the recommended file size is less than 20MB to prevent your browser from freezing or crashing.
           </p>
         </div>
 
