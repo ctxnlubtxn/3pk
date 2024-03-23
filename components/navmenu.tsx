@@ -1,5 +1,4 @@
 'use client';
-import { FaGithub } from 'react-icons/fa';
 import { TiThMenu } from 'react-icons/ti';
 import { useState } from 'react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
@@ -13,7 +12,7 @@ export default function NavMenu() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="flex justify-between items-center bg-gray-800 p-4">
+        <div>
             {/* responsive menu */}
             <div className="hidden md:flex items-center">
                 <DropdownMenu>
@@ -25,9 +24,9 @@ export default function NavMenu() {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                        <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
+                        {/* <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
                         <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem> */}
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
@@ -40,8 +39,8 @@ export default function NavMenu() {
             {/* responsive menu */}
             {open && (
                 <div className="md:hidden">
-                    <a href="/" className="block text-white">Home</a>
-                    <a href="/scam-apk" className="block text-white">SpamScam APK</a>
+                    {/* <a href="/" className="block text-white">Home</a>
+                    <a href="/scam-apk" className="block text-white">SpamScam APK</a> */}
                 </div>
             )}
         </div>
