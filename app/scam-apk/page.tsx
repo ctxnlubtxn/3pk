@@ -322,8 +322,8 @@ export default function ScamApkPage() {
                                     </Accordion>
                                 ) : (
                                     <div className="grid gap-2 p-4">
-                                        <h3 className="text-lg font-bold">Bot Token</h3>
-                                        <p>Bot token not found</p>
+                                        <h3 className="text-lg font-bold">Result</h3>
+                                        <p>Virus / token not found</p>
                                     </div>
                                 )
                             }
