@@ -303,8 +303,8 @@ export default function ScamApkPage() {
                     {listBotToken.map((data, index) => (
                         <AccordionItem value={"item-" + index.toString()} key={index}>
                             <AccordionTrigger className="overflow-x-auto">
-                                <p className="underline text-blue-500">{data.botToken}</p>
-                                <p className="text-red-500"> | Scam Alert!</p> {/* Added text with red color */}
+                                <p className="text-blue-500">{data.botToken}</p>
+                                <p className="text-red-500"> (Scam Alert)</p> {/* Added text with red color */}
                             </AccordionTrigger>
                             <AccordionContent>
                                 <div className="flex flex-col">
