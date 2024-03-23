@@ -37,8 +37,6 @@ export default function ScamApkPage() {
 
     const exampleApks = [
         "UNDANGAN PERNIKAHAN.apk",
-        "surat tilang elektronik.apk",
-        "PDF_ꜱᴜʀᴀᴛ ᴩᴀɴɢɢɪʟᴀɴ.apk"
     ]
 
     useEffect(() => {
